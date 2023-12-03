@@ -14,7 +14,7 @@ module.exports = function (config) {
         webpack: {
             devtool: 'inline-source-map',
             module: {
-                loaders: [
+                rules: [
                     {
                         test: /\.js$/,
                         exclude: /node_modules/,

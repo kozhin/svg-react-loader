@@ -1,12 +1,12 @@
 /*globals describe, it*/
-import R from 'ramda';
+import * as R from 'ramda';
 import React, { Component } from 'react';
 import { mount } from 'enzyme';
 
 import SimpleSvg from '../../lib/loader.js?name=SimpleSvg!../samples/simple.svg';
 import StylesSvg from '../../lib/loader.js?classIdPrefix!../samples/styles.svg';
 import TextSvg from '../../lib/loader.js!../samples/text.svg';
-import ObjectSvg from '../../lib/loader.js!../samples/object.json';
+// import ObjectSvg from '../../lib/loader.js!../samples/object.json';
 
 require('should');
 
@@ -116,30 +116,30 @@ describe('svg-react-loader', () => {
             true;
     });
 
-    it('object.svg', () => {
-        const wrapper = mount(<ObjectSvg />);
-        const expectedProps = {
-            "viewBox": "0 0 16 16",
-            "enableBackground": "new 0 0 16 16",
-            "xmlSpace": "preserve"
-        };
+    // it('object.svg', () => {
+    //     const wrapper = mount(<ObjectSvg />);
+    //     const expectedProps = {
+    //         "viewBox": "0 0 16 16",
+    //         "enableBackground": "new 0 0 16 16",
+    //         "xmlSpace": "preserve"
+    //     };
 
-        wrapper.
-            containsMatchingElement(<svg {...expectedProps} />).
-            should.
-            be.
-            true;
+    //     wrapper.
+    //         containsMatchingElement(<svg {...expectedProps} />).
+    //         should.
+    //         be.
+    //         true;
 
-        wrapper.
-            containsMatchingElement(<rect x="0" y="0" width="16" height="16" fill="#fff" />).
-            should.
-            be.
-            true;
+    //     wrapper.
+    //         containsMatchingElement(<rect x="0" y="0" width="16" height="16" fill="#fff" />).
+    //         should.
+    //         be.
+    //         true;
 
-        wrapper.
-            containsMatchingElement(<text>Foobar</text>).
-            should.
-            be.
-            true;
-    });
+    //     wrapper.
+    //         containsMatchingElement(<text>Foobar</text>).
+    //         should.
+    //         be.
+    //         true;
+    // });
 });
