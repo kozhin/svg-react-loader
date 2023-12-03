@@ -6,7 +6,7 @@ import { mount } from 'enzyme';
 import SimpleSvg from '../../lib/loader.js?name=SimpleSvg!../samples/simple.svg';
 import StylesSvg from '../../lib/loader.js?classIdPrefix!../samples/styles.svg';
 import TextSvg from '../../lib/loader.js!../samples/text.svg';
-// import ObjectSvg from '../../lib/loader.js!../samples/object.json';
+// import ObjectSvg from '../../lib/loader.js!../samples/object.json'; // TODO: needs a fix
 
 require('should');
 
